@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <header class="header">
+
+        <!-- El menu de 3 rayas, una imagen de htmlcss y la x solo se veran en la version Mobile y Tablet -->
+        <img src="../../images/html5css3.svg" class="header__image-htmlcss-MobileAndTablet" ></img>
+        
+        
+         <input type="checkbox" id="checkbox__hamburguesa" class="header__hamburguesa-checkbox"/>
+            <label for="checkbox__hamburguesa" class="header__menu-hamburguesa-icono-3rayas"> ☰ </label>
+            <label for="checkbox__hamburguesa" class="header__menu-hamburguesa-icono-x"> X </label>
+                
+            
+       
+        <!-- Logo HTML y CSS -->
+            
+            <img src="../../images/html5css3.svg" class="header__image-htmlcss" ></img>
+            
+            
+
+
+        <!-- Links de navegacion -->
+        <nav class="header_nav_container">
+            <div class="header__nav-containerLink"> <a href="../../index.html" class="header__nav-links">HOME</a> </div>
+            <div class="header__nav-containerLink"> <a href="../chessBoard/chessBoard.html" class="header__nav-links">BOARD</a> </div>
+            <div class="header__nav-containerLink"> <a href="../form/form.html" class="header__nav-links">CONTACTO</a> </div>
+        </nav>
+
+        <!-- Iconos de Redes Sociales -->
+        <div class="header__iconos-container">
+            <div> <img src="../../images/facebook.png" class="header__icono-imagen"/> </div>
+            <div> <img src="../../images/twitter.png"class="header__icono-imagen" /> </div>
+            <div> <img src="../../images/youtube.png" class="header__icono-imagen"/> </div>
+            <div> <img src="../../images/instagram.png" class="header__icono-imagen"/> </div>
+        </div>
+
+    </header>
+
+
+<!-- ************************************************************************************************************************************ -->
+
+
+    <main class="main">
+
+
+        <form class="form" action="https://www.google.com">
+        <div class="form__container">
+                <div class="form__container-container-1">
+
+                    
+                    <div class="form__container-container-1-titlebox">
+                        <p class="form__container-container-1-titlebox-titleMain"> Formulario de contacto </p>
+                        <p class="form__container-container-1-titlebox-subTitle"> Gracias por tomarte el tiempo para contactar con nosotros y ayudarnos a mejorar </p>
+                    </div>
+                    
+                    <!-- -------------------------------------- -->
+        
+                    <div class="form__container-container-1-inputs-checkboxSquare">
+
+                            <div class="form__container-container-1-input--text">
+                                <label for="name-id">Nombre</label>
+                                <input class="input-text" name="name-name" id="name-id" type="text" required>
+                            </div>
+                            <!-- --------------------------- -->
+                            <div class="form__container-container-1-input--text">
+                                <label for="email">Email</label>
+                                <input class="input-text" name="email-name" id="email-id" type="text" required pattern="*+@+*">
+                            </div>
+                            <!-- --------------------------- -->                
+                            <div class="form__container-container-1-input--text">
+                                <label for="edad">Edad</label>
+                                <input class="input-text" name="edad-name" id="edad-id" type="text" required>
+                            </div>
+                            <!-- --------------------------- -->
+                            <div class="form__container-container-1-input--text">
+                                <label for="situacion-id">¿Qué rol describe mejor tu situación actual?</label>
+                                <select class="input-text" name="situacion-name" id="situacion-id" required>
+                                    <option value="Selecciona_tu_rol_actual">Selecciona tu rol actual</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Trabajo_a_tiempo_completo">Trabajo a tiempo completo</option>
+                                    <option value="Freelance">Freelance</option>
+                                    <option value="Busacando_trabajo">Buscando trabajo</option>
+                                </select>
+                            </div>
+                            <!-- --------------------------- -->
+                            
+                            <div class="form__container-container-1-input--text radio-title">
+                                <p class="label_radio-buttons">¿Recomendarías esta página a un conocido?</p>
+                            </div>
+
+                            
+                            <div class="radio_buttons">
+                                
+                                        <div class="radio_select">
+                                            <label for="recomendar">Definitivamente Si</label>
+                                            <input class="radio_circle" type="radio" id="recomendar" name="recomendar" checked  value="1"/>
+                                        </div>
+
+                                        <div class="radio_select">
+                                            <label for="recomendar">Quizás</label>
+                                            <input class="radio_circle" type="radio" id="recomendar" name="recomendar" value="2"/>
+                                        </div>
+
+                                        <div class="radio_select">
+                                            <label for="recomendar">No estoy seguro</label>
+                                            <input class="radio_circle" type="radio" id="recomendar" name="recomendar"value="3" />
+                                        </div>
+                                   
+                            </div>
+                        
+
+                    </div>
+                    
+                </div>
+
+                <!-- ************************************************************* -->
+
+                <div class="form__container-container-2">
+                    <div class="form__container-container-2-checkBox-title">
+                        <div class="form__container-container-2-title">¿Qué recomendaciones te gustaría recibir? (Marca todas las que apliquen)</div>
+                        <div class="form__container-container-2-checkBox">
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Proyectos Front end </label>
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Proyectos Back end </label>
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Social media (Marketing) </label>
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Desarrollo de Videojuegos </label>
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Tutoriales de UX/UI </label>
+                            <label>  <input class="checkbox_square" type="checkbox" name="recomendarcurso" id="recomendarcurso" value="c2"> Otros </label>
+                        </div>
+                    </div>
+
+                    <div class="form__container-container-2-calendar">
+                        <label for="calendar-id">¿Cuando preferirías que te contactásemos?</label>
+                        <input class="form__container-container-2-calendar-input" name="calendar-name" id="calendar-id" type="date">
+                    </div>
+
+                    <div class="form__container-container-2-textBox">
+                        <label for="text_box-id">¿Cuando preferirías que te contactásemos?</label>
+                        <textarea class="form__container-container-2-textbox-input" name="text_box-name" id="text_box-id" rows="5" cols="50%">Introduzca sus comentarios..</textarea>
+                    </div>
+                </div>
+
+                <!-- ************************************************************* -->
+
+                <div class="form__container-container-3">
+                    <input class="button-enviar" type="submit" value="Enviar" >
+                </div>
+        </div>
+    </form>    
+
+
+    </main>
+
+
+<!-- ************************************************************************************************************************************ -->
+
+
+    <footer class="footer">
+        <p>Copyright @ Equipo3 2021</p>
+    </footer>
+</body>
+
+</html> 

@@ -1,0 +1,439 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+
+@font-face {
+    font-family: 'Oswald' ,sans-serif;
+    src: local('./fons/Oswald-VariableFont_wght.ttf') format('fft');
+}
+
+
+   
+body{
+    font-family: oswald, sans-serif ;
+}
+
+    .header{
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: solid;
+        border-color: orange;
+        
+        width: 100%;
+        padding: 1rem 1rem 0rem 1.5rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+            /* El checkbox, el menu de 3 rayas y la x solo se veran en la version Mobile y Tablet */
+            .header__image-htmlcss-MobileAndTablet{
+                display: none;
+                width: 7.5rem;
+            }
+
+            .header__hamburguesa-checkbox{
+                display: none;    
+
+            }
+
+            .header__container-checkbox-3rayas-x{
+                /* background-color: #1b1c20; */
+                display: flex;
+                align-items: center;
+            }
+
+                .header__menu-hamburguesa-icono-3rayas{
+                    display: none;
+                    position: relative;
+                    font-size: 2rem; 
+                    padding-top: 2.5rem;
+                    
+                    /* background-color: #4aca46; */
+                    left: 60%;
+                    /* vertical-align:top */
+                    
+                    
+                }
+
+            .header__menu-hamburguesa-icono-x{
+                display: none; 
+                position: relative;
+                font-size: 2rem;
+                padding-top: 2.5rem;
+                left: 60%;
+                /* background-color: rgb(135, 83, 20); */
+            }
+
+
+            /* Imagen HTML y CSS */
+            .header__image-htmlcss{
+                width: 7.5rem;
+            }
+
+
+            /* Contenedor de Links */
+            .header_nav_container{
+                display: flex;
+            }
+                        .header__nav-containerLink{
+                            display:flex;
+                            align-items: center; /* Alinea verticalmente */
+                            justify-content: center;
+                            width: 7rem;
+                            height: 5rem; 
+                        }
+
+                        .header__nav-links{
+                            text-decoration: none;
+                            color: black;
+                        }
+
+
+            /* Iconos de Redes Sociales */            
+            .header__iconos-container{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;/* Espacio Entre los elementos */
+                margin: 0.5rem;
+                
+            }
+                        .header__icono-imagen{
+                            width: 2.5rem;
+                            border-radius: 50%;
+                        }
+
+            
+            
+            
+           
+            
+ 
+/* Hover */
+    /*Hover para los Enlaces de Navegacion*/
+    .header__nav-containerLink:hover{
+        background-color: black;    
+    }
+    
+    .header__nav-containerLink:hover > .header__nav-links {
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+
+    /*Hover para las Redes Sociales*/
+    .header__icono-imagen:hover{
+        transform: scale(1.25);
+        animation-duration: 0.25s;
+        animation-timing-function: ease-in;
+        cursor: pointer;
+    }                        
+
+
+    
+
+    
+
+
+
+/* Breackpoints */
+    /* Pantalla modo movil de 0px a 480px */
+    @media ( min-width : 0px ) and ( max-width: 480px ) { 
+        .header__image-htmlcss{
+            display: none;
+        }
+
+        .header__image-htmlcss-MobileAndTablet{
+            display: inline;
+        }
+
+        .header{
+            display: inline-block;
+        }
+
+        .header__nav-containerLink{
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .header_nav_container{
+            display: none;
+        }
+        
+        .header__iconos-container{
+            display: none;
+        }
+
+        .header__menu-hamburguesa-icono-3rayas{
+            display: inline; 
+        }
+
+
+
+        .header__hamburguesa-checkbox:checked~.b{
+            background-color: #717787;
+        }
+
+
+
+
+
+        .header__hamburguesa-checkbox:checked~.header_nav_container{
+            display: block;
+                   
+        } */
+
+        .header__hamburguesa-checkbox:checked~.header__iconos-container{
+            display: inline-flex;
+        }
+
+        .header__hamburguesa-checkbox:checked~.header__menu-hamburguesa-icono-3rayas{
+            display: none;
+        }
+
+        .header__hamburguesa-checkbox:checked~.header__menu-hamburguesa-icono-x{
+            display: inline;
+        }
+
+
+
+    }
+
+
+    /* Pantalla modo Tablet de 1024x al infinito */
+    @media ( min-width : 481px ) and ( max-width: 1024px ) {
+        /* .body{
+            background-color: rgb(0, 72, 255);
+        } */
+
+        .header__image-htmlcss{
+            display: none;
+        }
+
+        .header__image-htmlcss-MobileAndTablet{
+            display: inline;
+        }
+
+        .header{
+            display: inline-block;
+        }
+
+        .header__nav-containerLink{
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .header_nav_container{
+            display: none;
+        }
+        
+        .header__iconos-container{
+            display: none;
+        }
+
+        .header__menu-hamburguesa-icono-3rayas{
+            display: inline; 
+            left: 70%;
+        }
+
+        .header__hamburguesa-checkbox:checked~.header_nav_container{
+            display: block;
+                   
+        }
+
+        .header__hamburguesa-checkbox:checked~.header__iconos-container{
+            display: inline-flex;
+        }
+
+        .header__hamburguesa-checkbox:checked~.header__menu-hamburguesa-icono-3rayas{
+            display: none;
+        }
+
+        .header__hamburguesa-checkbox:checked~.header__menu-hamburguesa-icono-x{
+            display: inline;
+        }
+        
+    }
+
+
+
+.main{
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+}    
+
+
+/* CHESS BOARD */
+.chessBoard__checkbox-label{
+    font-size: 1.5rem;
+}
+
+.chessBoard__checkbox-input{
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
+
+.chessBoar__container{
+    
+    display: flex;
+    justify-content: center;
+}
+        .chessBoard{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem;
+            /* height: 30rem;
+            width: 30rem;
+            border: 1rem solid black;
+             */
+        }
+
+            .chessBoard_casilla{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 12.5%;
+                height: 12.5%;
+            }
+                    .casilla-blanca {
+                        background-color: white;
+                    }
+                    .casilla-negra {
+                        background-color: grey;
+                    }
+
+                    .pieza {
+                        font-size: 2rem;
+                    }
+
+
+
+/* Rotacion del tablero y las piezas */                    
+@keyframes rotacion {
+        0% {
+            transform:rotate(0deg);
+        }
+
+        100% {
+            transform:rotate(180deg);
+        }
+    }
+
+
+    .chessBoard__checkbox-input:checked ~ .chessBoar__container .pieza{
+        animation-name: rotacion;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    .chessBoard__checkbox-input:checked ~ .chessBoar__container{
+        animation-name: rotacion;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+   
+/* BREACKPOINTS */
+        @media (min-width: 0px) and (max-width: 480px) {
+           
+                .chessBoard__checkbox-label{
+                    font-size: 1rem;
+                }
+                
+                .chessBoard {
+                    height: 13rem;
+                    width: 13rem;
+                    border: 0.5rem solid;
+                }
+
+                .pieza {
+                    font-size: 1rem;
+                }
+        }
+
+        @media (min-width: 481px) and (max-width: 1024px) {
+
+                .chessBoard{
+                    height: 30rem;
+                    width: 30rem;
+                    border: 1rem solid black;
+                }
+
+                .chessBoard__checkbox-input{
+                    transform: scale(2);
+                }
+        }
+
+        @media (min-width: 1025px) and (max-width: 1440px) {
+                .chessBoard__checkbox-label{
+                    font-size: 2rem;
+                }
+
+                .pieza {
+                    font-size: 2.5rem;
+                }
+
+                .chessBoard{
+                    height: 40rem;
+                    width: 40rem;
+                    border: 1rem solid black;
+                }
+
+                .chessBoard__checkbox-input{
+                    transform: scale(2.5);
+                }
+        }
+
+        @media (min-width: 1440px) {
+            .chessBoard__checkbox-label{
+                font-size: 3rem;
+            }
+
+            .pieza {
+                font-size: 3.5rem;
+            }
+
+            .chessBoard{
+                height: 50rem;
+                width: 50rem;
+                border: 2rem solid black;
+            }
+
+            .chessBoard__checkbox-input{
+                transform: scale(3);
+            }
+        }
+
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    background-color: #1b1c20;
+    color: #ffffff;
+    padding: 1.5em;
+    text-align: center;
+}        
+    
+
+
+
+
+
+
